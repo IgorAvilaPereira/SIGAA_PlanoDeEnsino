@@ -1,11 +1,3 @@
-
-
-// function mostraEmenta(disciplina) {
-//   var ementa = eval("ementa_" + disciplina);
-//   alert(ementa);
-//   return ementa;
-// }
-
 function script1(disciplina) {
 
   var ementa_fcp = "Histórico e evolução dos computadores e da computação. Classificação dos softwares e como são desenvolvidos. Interface de linha de comando. Formas de representação numérica e bases binária, octal, decimal e hexadecimal. Conversão entre bases numéricas. Aritmética binária. Representação dos números em precisão simples e dupla. Conceitos da organização do hardware, funcionamento da CPU e organização da memória.";
@@ -291,6 +283,8 @@ function script1(disciplina) {
 
   // avaliacoes
   const hoje = new Date();
+
+  // a primeira avaliacao na ta funcionando
   var dia = String(hoje.getDate()).padStart(2, '0');
   var mes = String(hoje.getMonth() + 1).padStart(2, '0'); // mês começa do 0
   var ano = hoje.getFullYear();
@@ -301,7 +295,7 @@ function script1(disciplina) {
   document.getElementById('form:adicionarAV').click();
 
 
-  document.getElementById("form:descricaoAV").value = "2ª Avaliação";
+  document.getElementById("form:descricaoAV").value = "2ª Avaliação";  
   hoje.setDate(hoje.getDate() + 7);
   var dia = String(hoje.getDate()).padStart(2, '0');
   var mes = String(hoje.getMonth() + 1).padStart(2, '0'); // Janeiro é 0
