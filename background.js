@@ -142,8 +142,9 @@ function script1(disciplina) {
   var ementa_sem = "Apresentação de projetos, seminários e palestras relevantes à formação do futuro profissional de TI.";
   var objetivo_sem = "Desenvolver habilidades de escrita e apresentação de seminários sobre assuntos relevantes à área de TI.";
 
-  var acc = ["poo", "dit", "sop", "aps", "iob", "fee"];
-  var ementa_acc = "Os cursos superiores de tecnologia estarão organizados em uma base de conhecimentos científicos e tecnológicos, dessa maneira poderão ser previstas horas de atividades complementares realizadas por meio de desenvolvimento de projetos integradores/técnicos, de extensão e/ou de pesquisa e outras formas de atividades acadêmico-científico-culturais.";
+  // var acc = ["poo", "dit", "sop", "aps", "iob", "fee"];
+  // var ementa_acc = "Os cursos superiores de tecnologia estarão organizados em uma base de conhecimentos científicos e tecnológicos, dessa maneira poderão ser previstas horas de atividades complementares realizadas por meio de desenvolvimento de projetos integradores/técnicos, de extensão e/ou de pesquisa e outras formas de atividades acadêmico-científico-culturais.";
+  // var objetivo_acc = "";
 
   var tcc = ["rcp", "ppa", "wb2", "qsf", "eep", "mct"];
   var co_tcc = ["sem"];
@@ -162,7 +163,7 @@ function script1(disciplina) {
 
   var ementas = {
     ementa_fcp: ementa_fcp,
-    ementa_acc: ementa_acc,
+    // ementa_acc: ementa_acc,
     ementa_aps: ementa_aps,
     ementa_dif: ementa_dif,
     ementa_dit: ementa_dit,
@@ -204,7 +205,7 @@ function script1(disciplina) {
 
   var objetivos = {
     objetivo_fcp: objetivo_fcp,
-    objetivo_acc: objetivo_acc,
+    // objetivo_acc: objetivo_acc,
     objetivo_aps: objetivo_aps,
     objetivo_dif: objetivo_dif,
     objetivo_dit: objetivo_dit,
