@@ -305,6 +305,13 @@ function script1(disciplina) {
   document.getElementById("form:horaAV").value = "18:50";
   document.getElementById('form:adicionarAV').click();
 
+  // // aulas
+  // var tamanho = document.getElementById("form:inicioTA").length;
+  // for (let index = 0; index < tamanho; index++) {
+  //     document.getElementById("form:inicioTA")[index].value;
+    
+  // }
+
 }
 
 document.addEventListener("DOMContentLoaded", function () {
