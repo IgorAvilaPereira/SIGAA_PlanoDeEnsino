@@ -15,9 +15,6 @@ function script1(disciplina) {
   var ementa_tsc = "Tecnologia e Sociedade. Ética. Educação Ambiental, Direitos Humanos, Educação das Relações Étnico-Raciais, História e Cultura Afro-Brasileira, Africana e Indígena.";
   var ementa_mbs = "Conjuntos, sua definição e suas operações. Conjuntos Numéricos e suas operações. Relações e seus tipos. Relações Binárias e o Plano Cartesiano. Representação Matricial. Funções, sua definição e as funções básicas: identidade, valor absoluto e percentual.";
 
-
-
-
   var ocp = ["fcp"];
   var ementa_ocp = "Estrutura básica de computadores. A Unidade Central de Processamento. Estruturas de barramentos. Organização de memória. Sistemas de entrada/saída. Suporte ao sistema operacional. Padrões de arquiteturas. Introdução a arquiteturas dedicadas. Linguagem de montagem.";
 
@@ -32,6 +29,7 @@ function script1(disciplina) {
 
   var pmb = ["sif"];
   var ementa_pmb = "Introdução aos conceitos básicos de banco de dados e sistemas gerenciadores de banco de dados. Projeto de banco de dados. Modelagem conceitual, lógica e física de banco de dados relacionais. Noções de linguagem para implementação e operação.";
+  var objetivo_pmb = "Objetivos Introduzir os conceitos básicos sobre banco de dados e desenvolver a habilidade de modelar, ler e interpretar modelos de banco de dados relacionais.";
 
   var fmd = ["mbs"];
   var ementa_fmd = "Estudo dos princípios fundamentais da lógica: cálculo proposicional, proposições, operações lógicas e argumentos válidos; e da matemática discreta: álgebra dos conjuntos, operações com conjuntos, álgebra booleana, relações entre a álgebra de conjuntos e a álgebra de proposições, relações binárias. Teoria dos números. Indução Matemática. Somatórios e Combinatórios.";
@@ -50,12 +48,14 @@ function script1(disciplina) {
 
   var iob = ["lgp", "fmd", "pmb"];
   var ementa_iob = "Modelo relacional. Linguagem para definição, manipulação e consulta de dados. Normalização. Noções de programação em bancos de dados.";
+  var objetivo_iobd = "Implementar e manipular bancos de dados relacionais.";
 
   var fee = ["mbs"];
   var ementa_fee = "Princípios do Pensamento Estatístico (PE) e Aprendizagem por Problema (PBL) estatístico. Produção de dados: indivíduo, atributo e  variável, Dado Estatístico e Informação Estatística. Retratar a variação em gráficos: histograma, gráficos de barras, gráficos de setores, gráficos de dispersão e Box-Plot. Descrever a variação em números: medidas de posição, dispersão, assimetria e curtose. Associação entre variáveis: análise bidimensional básica";
 
   var ppp = ["poo", "aps"];
   var ementa_ppp = "Conceitos de projeto: hierarquia, abstração, modularização e encapsulamento. Decisões de projeto quanto ao uso de herança, composição e delegação. Princípios de projeto de software, como o SOLID e outros. Refatoração. Padrões de projeto de software GoF e emergentes. Anti-padrões. Noções de princípios e padrões de arquitetura.";
+  var objetivo_ppp = "Projetar e implementar sistemas considerando os princípios e padrões de projeto.";
 
   var wb1 = ["poo", "dit", "iob"];
   var ementa_wb1 = "Arquitetura da web. Noções do protocolo HTTP e funcionamento de um servidor web. Linguagem de script para desenvolvimento web no servidor. Dados de sessão. Integração com SGBDs e outras fontes de dados. Noções de web frameworks.";
@@ -71,6 +71,7 @@ function script1(disciplina) {
 
   var pbd = ["iob"];
   var ementa_pbd = "Funções. Estruturas de controle. Procedures. Cursores. Gatilhos. Tratamento de erros e mensagens.";
+  var objetivo_pbd = "Projetar e implementar funções e procedimentos nos bancos de dados.";
 
   var gpj = ["aps"];
   var ementa_gpj = "Conceitos envolvendo projetos, Modelo Tradicional de Gerenciamento - papel do gerente, Áreas de Gerenciamento de Projetos (integração, escopo, tempo, custo, qualidade, RH, comunicações, riscos, aquisições e partes interessadas), Gerenciamento Ágil de Projeto.";
@@ -100,6 +101,7 @@ function script1(disciplina) {
 
   var tbd = ["pbd"];
   var ementa_tbd = "Noções de bancos de dados não-relacionais, tuning, OLAP, pivotamento, particionamento, sharding e tópicos emergentes em bancos de dados.";
+  var objetivo_tbd = "Conhecer os conceitos e saber empregar as ferramentas, metodologias e tecnologias da atualidade no campo de Bancos de Dados.";
 
   var tas = ["qsf"];
   var ementa_tas = "Noções de sistemas de apoio à decisão, business intelligence, verificação e validação, testes automatizados e tópicos emergentes na análise de sistemas e negócios.";
@@ -161,11 +163,24 @@ function script1(disciplina) {
     ementa_tsc: ementa_tsc
   };
 
+
+  var objetivos = {
+    objetivo_iobd: objetivo_iobd,
+    objetivo_pbd: objetivo_pbd,
+    objetivo_pmb: objetivo_pmb,
+    objetivo_ppp: objetivo_ppp,
+    objetivo_tbd: objetivo_tbd
+  };
+
   // objetivo geral do curso
   var iframe = document.getElementById('form:objetivoGeralCurso_ifr');
   var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
   var elemento = iframeDocument.getElementById('tinymce');
-  elemento.innerHTML = "objetivo geral";
+  try {
+    elemento.innerHTML = objetivos["ementa_" + disciplina];  
+  } catch (error) {
+    elemento.innerHTML = "objetivo geral";
+  }  
 
   // objetivo geral do componente curricular
   var iframe = document.getElementById('form:objetivoComponenteCurricular_ifr');
