@@ -104,6 +104,7 @@ function script1(disciplina) {
 
   var ppa = ["ppp"];
   var ementa_ppa = "Tipos de aplicativos e visão geral das plataformas para desenvolvimento e implantação. Atributos qualitativos. Estilos arquiteturais. Princípios e padrões de arquitetura de software para lógica de domínio, apresentação e integração com serviços externos e bancos de dados. Arquitetura orientada a serviços. Crosscutting concerns. Modelagem, implementação, empacotamento e distribuição de componentes, bibliotecas e frameworks.";
+  var objetivo_ppa = "Projetar e implementar sistemas considerando os princípios e padrões de arquitetura.";
 
   var rcp = ["edd"];
   var ementa_rcp = "Modelos de referência OSI/ISO e TCP/IP. Topologias, protocolos e serviços em redes, associados aos diversos níveis dos modelos de referência. Noções de Interligação, gerenciamento, segurança e aplicações de redes de computadores.";
