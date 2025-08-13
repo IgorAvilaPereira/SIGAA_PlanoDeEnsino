@@ -308,11 +308,10 @@ function script1(disciplina) {
   // aulas
   var tamanho = document.getElementById("form:inicioTA").length;
   for (let index = 0; index < tamanho; index++) {
-    
+    // todo: verificar se aula já existe
     // var tabela = document.getElementById("form:listaTopicosAula");
     // var linhas = tabela.getElementsByTagName("tr");
     // var valorProcurado = "Maria";
-
     // for (let i = 0; i < linhas.length; i++) {
     //   const celulas = linhas[i].getElementsByTagName("td");
     //   for (let j = 0; j < celulas.length; j++) {
@@ -323,13 +322,17 @@ function script1(disciplina) {
     //     }
     //   }
     // }
+    
     document.getElementById("form:inicioTA").selectedIndex = index;
     document.getElementById("form:fimTA").selectedIndex = index;
     document.getElementById("form:descricaoTA").value = "Aula";
-    var iframe = document.getElementById('form:conteudoTA_ifr');
-    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-    var elemento = iframeDocument.getElementById('tinymce');
-    elemento.innerHTML = "Conteúdo Diverso.";
+    
+    // Conteudo: não obrigatório
+    // var iframe = document.getElementById('form:conteudoTA_ifr');
+    // var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+    // var elemento = iframeDocument.getElementById('tinymce');
+    // elemento.innerHTML = "Conteúdo Diverso.";
+
     document.getElementById('form:adicionarTA').click();
   }
 }
