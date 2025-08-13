@@ -291,10 +291,10 @@ function script1(disciplina) {
 
   // avaliacoes
   const hoje = new Date();
-  const dia = String(hoje.getDate()).padStart(2, '0');
-  const mes = String(hoje.getMonth() + 1).padStart(2, '0'); // mês começa do 0
-  const ano = hoje.getFullYear();
-  const dataFormatada = `${dia}/${mes}/${ano}`;
+  var dia = String(hoje.getDate()).padStart(2, '0');
+  var mes = String(hoje.getMonth() + 1).padStart(2, '0'); // mês começa do 0
+  var ano = hoje.getFullYear();
+  var dataFormatada = `${dia}/${mes}/${ano}`;
   document.getElementById("form:descricaoAV").value = "1ª Avaliação";
   document.getElementById("form:dataAV").value = dataFormatada;
   document.getElementById("form:horaAV").value = "18:50";
@@ -302,6 +302,11 @@ function script1(disciplina) {
 
 
   document.getElementById("form:descricaoAV").value = "2ª Avaliação";
+  hoje.setDate(hoje.getDate() + 7);
+  var dia = String(hoje.getDate()).padStart(2, '0');
+  var mes = String(hoje.getMonth() + 1).padStart(2, '0'); // Janeiro é 0
+  var ano = hoje.getFullYear();
+  var dataFormatada = `${dia}/${mes}/${ano}`;
   document.getElementById("form:dataAV").value = dataFormatada;
   document.getElementById("form:horaAV").value = "18:50";
   document.getElementById('form:adicionarAV').click();
