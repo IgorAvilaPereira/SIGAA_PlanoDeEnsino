@@ -306,12 +306,18 @@ function script1(disciplina) {
   document.getElementById('form:adicionarAV').click();
 
   // // aulas
-  // var tamanho = document.getElementById("form:inicioTA").length;
-  // for (let index = 0; index < tamanho; index++) {
-  //     document.getElementById("form:inicioTA")[index].value;
-    
-  // }
-
+  var tamanho = document.getElementById("form:inicioTA").length;
+  for (let index = 0; index < tamanho; index++) {
+    // form:listaTopicosAula
+      document.getElementById("form:inicioTA").selectedIndex = index;
+      document.getElementById("form:fimTA").selectedIndex = index;
+      document.getElementById("form:descricaoTA").value = "Aula";    
+      var iframe = document.getElementById('form:conteudoTA_ifr');
+      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      var elemento = iframeDocument.getElementById('tinymce');     
+      elemento.innerHTML = "Conteúdo Diverso.";
+      document.getElementById('form:adicionarTA').click();      
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
