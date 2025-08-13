@@ -177,7 +177,7 @@ function script1(disciplina) {
   var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
   var elemento = iframeDocument.getElementById('tinymce');
   try {
-    elemento.innerHTML = objetivos["ementa_" + disciplina];  
+    elemento.innerHTML = objetivos["objetivo_" + disciplina];  
   } catch (error) {
     elemento.innerHTML = "objetivo geral";
   }  
