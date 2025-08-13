@@ -148,9 +148,9 @@ function script1(disciplina) {
   var ementa_mct = "História do pensamento científico e seus métodos. Os aspectos básicos da pesquisa: formulação do problema, objetivos, hipóteses e variáveis. Técnicas de redação e apresentação do trabalho científico. Princípios norteadores do trabalho científico.";
   var objetivo_mct = "Conhecer o pensamento e método científico, as metodologias e saber usar técnicas de redação e apresentação de trabalhos científicos.";
 
-  var ementa_ingles = "Revisão gramatical e sintática básica da língua inglesa. Expressões técnicas e estruturas básicas da língua para leitura e compreensão de textos diversos na área do curso. Estratégias de leitura em língua inglesa e usos do dicionário como ferramenta instrumental. Interpretação de textos técnicos a partir do desenvolvimento de habilidades de leitura e do estudo de itens gramaticais sistematizados referentes à linguagem tecnológica específica. Abordagem integrada dos níveis de compreensão de leitura, suas estratégias e aspectos léxico gramaticais;"; 
+  var ementa_ingles = "Revisão gramatical e sintática básica da língua inglesa. Expressões técnicas e estruturas básicas da língua para leitura e compreensão de textos diversos na área do curso. Estratégias de leitura em língua inglesa e usos do dicionário como ferramenta instrumental. Interpretação de textos técnicos a partir do desenvolvimento de habilidades de leitura e do estudo de itens gramaticais sistematizados referentes à linguagem tecnológica específica. Abordagem integrada dos níveis de compreensão de leitura, suas estratégias e aspectos léxico gramaticais;";
   var objetivo_ingles = "Identificar e compreender a terminologia básica em língua inglesa da área de tecnologia da informação e as estruturas básicas de textos diversos a partir da leitura, análise e interpretação de textos técnicos e científicos da área do curso, além de desenvolver estratégias de compreensão leitora de textos específicos da área da informática, em língua inglesa, que envolvam linguagens de programação, informações de suporte de uso de tecnologias e de ferramentas e manuais de produto.";
-  
+
   var ementa_libras = "Criar possibilidades metodológicas de interação e integração da comunidade acadêmica ouvinte, com pessoas surdas usuárias da Língua de Sinais da cidade do Rio Grande. Conceituar Libras, explorando os fundamentos históricos da educação de surdos, os aspectos linguísticos da Língua, além de sinais específicos da área.";
   var objetivo_libras = "Saber se expressar em LIBRAS, orientar as pessoas surdas usuárias da língua, poder interagir com a comunidade surda local e prestar serviços por meio de conhecimentos mínimos da língua de sinais.";
 
@@ -295,7 +295,7 @@ function script1(disciplina) {
   document.getElementById('form:adicionarAV').click();
 
 
-  document.getElementById("form:descricaoAV").value = "2ª Avaliação";  
+  document.getElementById("form:descricaoAV").value = "2ª Avaliação";
   hoje.setDate(hoje.getDate() + 7);
   var dia = String(hoje.getDate()).padStart(2, '0');
   var mes = String(hoje.getMonth() + 1).padStart(2, '0'); // Janeiro é 0
@@ -305,25 +305,38 @@ function script1(disciplina) {
   document.getElementById("form:horaAV").value = "18:50";
   document.getElementById('form:adicionarAV').click();
 
-  // // aulas
+  // aulas
   var tamanho = document.getElementById("form:inicioTA").length;
   for (let index = 0; index < tamanho; index++) {
-    // form:listaTopicosAula
-      document.getElementById("form:inicioTA").selectedIndex = index;
-      document.getElementById("form:fimTA").selectedIndex = index;
-      document.getElementById("form:descricaoTA").value = "Aula";    
-      var iframe = document.getElementById('form:conteudoTA_ifr');
-      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-      var elemento = iframeDocument.getElementById('tinymce');     
-      elemento.innerHTML = "Conteúdo Diverso.";
-      document.getElementById('form:adicionarTA').click();      
+    
+    // var tabela = document.getElementById("form:listaTopicosAula");
+    // var linhas = tabela.getElementsByTagName("tr");
+    // var valorProcurado = "Maria";
+
+    // for (let i = 0; i < linhas.length; i++) {
+    //   const celulas = linhas[i].getElementsByTagName("td");
+    //   for (let j = 0; j < celulas.length; j++) {
+    //     if (celulas[j].textContent.trim() === valorProcurado) {
+    //       console.log(`Valor "${valorProcurado}" encontrado na linha ${i}`);
+    //       // Você pode destacar a linha, por exemplo:
+    //       linhas[i].style.backgroundColor = "yellow";
+    //     }
+    //   }
+    // }
+    document.getElementById("form:inicioTA").selectedIndex = index;
+    document.getElementById("form:fimTA").selectedIndex = index;
+    document.getElementById("form:descricaoTA").value = "Aula";
+    var iframe = document.getElementById('form:conteudoTA_ifr');
+    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+    var elemento = iframeDocument.getElementById('tinymce');
+    elemento.innerHTML = "Conteúdo Diverso.";
+    document.getElementById('form:adicionarTA').click();
   }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("#btn1").addEventListener("click", function () {
     var disciplina = document.querySelector('input[name="disciplina"]:checked').value;
-
     (async () => {
       const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
       chrome.scripting.executeScript({
