@@ -314,7 +314,6 @@ function script1(disciplina) {
   // }
 
   // if (aval1 == false) {
-  // a primeira avaliacao na ta funcionando
   var dia = String(hoje.getDate()).padStart(2, '0');
   var mes = String(hoje.getMonth() + 1).padStart(2, '0'); // mês começa do 0
   var ano = hoje.getFullYear();
