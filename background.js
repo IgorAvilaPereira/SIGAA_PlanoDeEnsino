@@ -273,7 +273,8 @@ function script1(disciplina) {
   elemento.innerHTML = "A avaliação da aprendizagem deverá ocorrer ao longo da disciplina e no decorrer dos trabalhos. Haverá, durante a disciplina questionamentos, possibilitando aos alunos, quando for o caso, o retorno dos temas propostos anteriormente. Ao final de cada aula, materiais de apoio serão encaminhados para turma; Pesos aproximados: 50% atividade presencial, 50% atividades extra-classe (trabalhos).";
 
   // atendimentos
-  document.getElementById("form:horarioAtendimento").value = "a) via e-mail/discord, b) nos encontros presenciais c) por demanda, em data e horário combinado entre professor e estudantes.";
+  document.getElementById("form:horarioAtendimento").value = "";
+  // document.getElementById("form:horarioAtendimento").value = "a) via e-mail/discord, b) nos encontros presenciais c) por demanda, em data e horário combinado entre professor e estudantes.";
 
   // observacoes  
   var iframe = document.getElementById('form:observacao_ifr');
@@ -345,16 +346,23 @@ function script1(disciplina) {
     // }    
     document.getElementById("form:inicioTA").selectedIndex = index;
     document.getElementById("form:fimTA").selectedIndex = index;
-    document.getElementById("form:descricaoTA").value = "Aula";
-    
+    document.getElementById("form:descricaoTA").value = "Aula";    
     // Conteudo: não obrigatório
     // var iframe = document.getElementById('form:conteudoTA_ifr');
     // var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
     // var elemento = iframeDocument.getElementById('tinymce');
     // elemento.innerHTML = "Conteúdo Diverso.";
-
-    document.getElementById('form:adicionarTA').click();
+    document.getElementById("form:adicionarTA").click();
   }
+
+  // document.getElementById("form:tipo:3").checked = true;
+  document.getElementById("form:tipo:3").click();
+  document.getElementById("form:descricao").value = "PPC - TADS";
+  document.getElementById("form:url").value = "https://tads.riogrande.ifrs.edu.br/ppc";
+  document.getElementById("form:tipoIR:0").checked = true;
+  document.getElementById("form:adicionarIR").click();
+  
+  // document.getElementById("form:tipoIR").value = 1;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
