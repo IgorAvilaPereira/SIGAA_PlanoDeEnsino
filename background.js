@@ -331,27 +331,35 @@ function script1(disciplina) {
   document.getElementById('form:adicionarAV').click();
   // }
 
+  // document.getElementById("form:tipo:3").checked = true;
+  document.getElementById("form:tipo:3").click();
+  document.getElementById("form:descricao").value = "PPC - TADS";
+  document.getElementById("form:url").value = "https://tads.riogrande.ifrs.edu.br/ppc";
+  document.getElementById("form:tipoIR:0").checked = true;
+  // document.getElementById("form:tipoIR").value = 1;
+  document.getElementById("form:adicionarIR").click();
+
 
   // aulas
-  const meses = {
-    'janeiro': '01',
-    'fevereiro': '02',
-    'março': '03',
-    'abril': '04',
-    'maio': '05',
-    'junho': '06',
-    'julho': '07',
-    'agosto': '08',
-    'setembro': '09',
-    'outubro': '10',
-    'novembro': '11',
-    'dezembro': '12'
-  };
+  // const meses = {
+  //   'janeiro': '01',
+  //   'fevereiro': '02',
+  //   'março': '03',
+  //   'abril': '04',
+  //   'maio': '05',
+  //   'junho': '06',
+  //   'julho': '07',
+  //   'agosto': '08',
+  //   'setembro': '09',
+  //   'outubro': '10',
+  //   'novembro': '11',
+  //   'dezembro': '12'
+  // };
 
   // aulas
   var tamanho = document.getElementById("form:inicioTA").length;
   for (let index = 0; index < tamanho; index++) {
-    
+
     /*
     // para cada data do select ja existe uma aula cadastrada na tabela?
     var partes = document.getElementById("form:inicioTA")[index].innerText.split(', ')[1].split(' de ');
@@ -374,24 +382,18 @@ function script1(disciplina) {
     // se não - cadastra
     if (e == false) {
     */
-      document.getElementById("form:inicioTA").selectedIndex = index;
-      document.getElementById("form:fimTA").selectedIndex = index;
-      document.getElementById("form:descricaoTA").value = "Aula";
-      // Conteudo: não obrigatório
-      // var iframe = document.getElementById('form:conteudoTA_ifr');
-      // var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-      // var elemento = iframeDocument.getElementById('tinymce');
-      // elemento.innerHTML = "Conteúdo Diverso.";
-      document.getElementById("form:adicionarTA").click();
+    document.getElementById("form:inicioTA").selectedIndex = index;
+    document.getElementById("form:fimTA").selectedIndex = index;
+    document.getElementById("form:descricaoTA").value = "Aula";
+    // Conteudo: não obrigatório
+    // var iframe = document.getElementById('form:conteudoTA_ifr');
+    // var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+    // var elemento = iframeDocument.getElementById('tinymce');
+    // elemento.innerHTML = "Conteúdo Diverso.";
+    document.getElementById("form:adicionarTA").click();
     // }
   }
-  // document.getElementById("form:tipo:3").checked = true;
-  document.getElementById("form:tipo:3").click();
-  document.getElementById("form:descricao").value = "PPC - TADS";
-  document.getElementById("form:url").value = "https://tads.riogrande.ifrs.edu.br/ppc";
-  document.getElementById("form:tipoIR:0").checked = true;
-  // document.getElementById("form:tipoIR").value = 1;
-  document.getElementById("form:adicionarIR").click();  
+
 }
 
 document.addEventListener("DOMContentLoaded", function () {
