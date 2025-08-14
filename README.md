@@ -20,7 +20,7 @@ Você é professor e precisa preencher intermináveis planos de ensino todo o se
 
 2. Depois da instalação, é preciso entrar no SIGAA com seu login e senha e acessar a página de preenchimento do plano de ensino de cada componente curricular (disciplina): 
 
-* >> Portal do Docente > Ensino > Turmas > Gerenciar Plano de Curso > E selecione o componente curricular desejado.
+* Portal do Docente > Ensino > Turmas > Gerenciar Plano de Curso > E selecione o componente curricular desejado.
 
 3. Acesse a extensão, selecione a disciplina e clique no botão "Preencher".
 
