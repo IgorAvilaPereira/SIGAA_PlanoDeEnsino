@@ -26,6 +26,10 @@ Você é professor e precisa preencher intermináveis planos de ensino todo o se
 
 3. Acesse a extensão, selecione a disciplina e clique no botão "Preencher".
 
+![](demo1.png)
+
+![](demo2.png)
+
 4. A extensão preeencherá os campos de objetivos, metodologia, atendimento, ementas, bibliografia, avaliações e etc. automaticamente.
 
 5. Confira o que foi preenchido e clique no botão "Salvar e Enviar" no final da página (SIGAA)
