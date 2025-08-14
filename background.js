@@ -305,6 +305,27 @@ function script1(disciplina) {
   document.getElementById("form:horaAV").value = "18:50";
   document.getElementById('form:adicionarAV').click();
 
+  // const meses = {
+  //   'janeiro': '01',
+  //   'fevereiro': '02',
+  //   'março': '03',
+  //   'abril': '04',
+  //   'maio': '05',
+  //   'junho': '06',
+  //   'julho': '07',
+  //   'agosto': '08',
+  //   'setembro': '09',
+  //   'outubro': '10',
+  //   'novembro': '11',
+  //   'dezembro': '12'
+  // };
+  // Remove o dia da semana e divide a string
+  // const partes = dataTexto.toLowerCase().split(', ')[1].split(' de ');
+  // const dia = partes[0].padStart(2, '0');
+  // const mes = meses[partes[1]];
+  // const ano = partes[2];
+  // return `${dia}/${mes}/${ano}`;
+
   // aulas
   var tamanho = document.getElementById("form:inicioTA").length;
   for (let index = 0; index < tamanho; index++) {
@@ -321,8 +342,7 @@ function script1(disciplina) {
     //       linhas[i].style.backgroundColor = "yellow";
     //     }
     //   }
-    // }
-    
+    // }    
     document.getElementById("form:inicioTA").selectedIndex = index;
     document.getElementById("form:fimTA").selectedIndex = index;
     document.getElementById("form:descricaoTA").value = "Aula";
