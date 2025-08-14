@@ -22,6 +22,8 @@ Você é professor e precisa preencher intermináveis planos de ensino todo o se
 
 * Portal do Docente > Ensino > Turmas > Gerenciar Plano de Curso > E selecione o componente curricular desejado.
 
+* obs: no início de cada semestre não é preciso nem realizar estes passos, basta acessar o componente é que automaticamente e de forma obrigatória a tela de preeenchimento do plano de ensino aparece - sendo impossível acessar sua Turma.
+
 3. Acesse a extensão, selecione a disciplina e clique no botão "Preencher".
 
 4. A extensão preeencherá os campos de objetivos, metodologia, atendimento, ementas, bibliografia, avaliações e etc. automaticamente.
