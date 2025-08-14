@@ -1,6 +1,6 @@
 # SIGAA_PlanoDeEnsino
 
-Você é professore precisa preencher intermináveis planos de ensino todo o semestre - sempre da mesma forma? Seus problemas acabaram!.
+Você é professor e precisa preencher intermináveis planos de ensino todo o semestre - sempre da mesma forma? Seus problemas acabaram!.
 
 
 ## Instalação
