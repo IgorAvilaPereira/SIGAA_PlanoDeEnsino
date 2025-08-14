@@ -384,9 +384,9 @@ function script1(disciplina) {
     // }
   }
 
-  document.getElementById("form:tipo:3").checked = true;
+  // document.getElementById("form:tipo:3").checked = true;
   document.getElementById("form:tipo:3").click();
-  document.getElementById("form:tipoIR:0").checked = true;
+  // document.getElementById("form:tipoIR:0").checked = true;
   document.getElementById("form:tipoIR:0").click();
   document.getElementById("form:descricao").value = "PPC - TADS";
   document.getElementById("form:url").value = "https://tads.riogrande.ifrs.edu.br/ppc";  
