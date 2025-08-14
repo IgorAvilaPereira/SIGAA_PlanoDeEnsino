@@ -250,7 +250,7 @@ function script1(disciplina) {
         elemento.innerHTML = "objetivo geral";
       }
   } catch (error) {
-    alert("Página Incorreta! Acesse: https://sig.ifrs.edu.br/sigaa/portais/docente/docente.jsf");
+    alert("Página Incorreta!\nAcesse: https://sig.ifrs.edu.br/sigaa/portais/docente/docente.jsf");
     return false;
   }
 
