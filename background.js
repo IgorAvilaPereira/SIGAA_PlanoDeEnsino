@@ -350,23 +350,23 @@ function script1(disciplina) {
 
   // aulas
   var tamanho = document.getElementById("form:inicioTA").length;
-  for (let index = 0; index < tamanho; index++) {    
-    
+  for (let index = 0; index < tamanho; index++) {
     // para cada data do select ja existe uma aula cadastrada na tabela?
     var partes = document.getElementById("form:inicioTA")[index].innerText.split(', ')[1].split(' de ');
     var dia = partes[0].padStart(2, '0');
-    var mes = meses[partes[1]];
+    var mes = meses[partes[1].toLowerCase()];
     var ano = partes[2];
-    var valorProcurado = `${dia}/${mes}/${ano}`;
-    
-    var e = false;
-    var tabela = document.getElementById("form:listaTopicosAula");
-    var linhas = tabela.querySelectorAll("tbody tr");
-    for (let linha of linhas) {
-      var celula = linha.querySelectorAll("td")[0];
-      if (celula && celula.textContent.trim() === valorProcurado.toString()) {
-        e = true;
-      }
+    var valorProcurado = dia+"/"+mes+"/"+ano;
+    var e = false;    
+    var linhas = document.getElementById("form:listaTopicosAula").querySelectorAll("tr").length;
+    for (let i = 1; i <= linhas.length; i++) {
+      try {
+        var celula = linhas[i].querySelectorAll("td")[0].innerText;
+        if (celula && celula.trim() === valorProcurado.trim()) {
+          e = true;
+        }
+      } catch (error) {        
+      }        
     }
 
     // se não - cadastra
@@ -387,9 +387,8 @@ function script1(disciplina) {
   document.getElementById("form:descricao").value = "PPC - TADS";
   document.getElementById("form:url").value = "https://tads.riogrande.ifrs.edu.br/ppc";
   document.getElementById("form:tipoIR:0").checked = true;
-  document.getElementById("form:adicionarIR").click();
-
   // document.getElementById("form:tipoIR").value = 1;
+  document.getElementById("form:adicionarIR").click();  
 }
 
 document.addEventListener("DOMContentLoaded", function () {
