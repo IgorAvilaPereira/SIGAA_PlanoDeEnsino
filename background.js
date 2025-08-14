@@ -240,14 +240,20 @@ function script1(disciplina) {
   };
 
   // objetivo geral do curso
-  var iframe = document.getElementById('form:objetivoGeralCurso_ifr');
-  var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-  var elemento = iframeDocument.getElementById('tinymce');
   try {
-    elemento.innerHTML = objetivos["objetivo_" + disciplina];
+      var iframe = document.getElementById('form:objetivoGeralCurso_ifr');
+      var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      var elemento = iframeDocument.getElementById('tinymce');
+      try {
+        elemento.innerHTML = objetivos["objetivo_" + disciplina];
+      } catch (error) {
+        elemento.innerHTML = "objetivo geral";
+      }
   } catch (error) {
-    elemento.innerHTML = "objetivo geral";
+    alert("Página Incorreta! Acesse: https://sig.ifrs.edu.br/sigaa/portais/docente/docente.jsf");
+    return false;
   }
+
 
   // objetivo geral do componente curricular
   var iframe = document.getElementById('form:objetivoComponenteCurricular_ifr');
