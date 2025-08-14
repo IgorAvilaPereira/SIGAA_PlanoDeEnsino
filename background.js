@@ -1,3 +1,4 @@
+
 function script1(disciplina) {
 
   var ementa_fcp = "Histórico e evolução dos computadores e da computação. Classificação dos softwares e como são desenvolvidos. Interface de linha de comando. Formas de representação numérica e bases binária, octal, decimal e hexadecimal. Conversão entre bases numéricas. Aritmética binária. Representação dos números em precisão simples e dupla. Conceitos da organização do hardware, funcionamento da CPU e organização da memória.";
@@ -285,6 +286,28 @@ function script1(disciplina) {
   // avaliacoes
   const hoje = new Date();
 
+  // var tabela = document.getElementById("form:listaAvaliacoes");
+  // var linhas = tabela.querySelectorAll("tbody tr");
+  // var valores = [];
+  // linhas.forEach(linha => {
+  //   const celulas = linha.querySelectorAll("td");
+  //   if (celulas[1]) {
+  //     valores.push(celulas[1].textContent.trim());
+  //   }
+  // });
+  // var vetAvaliacao = valores;
+  // var aval1 = false;
+  // var aval2 = false;
+  // for (let index = 0; index < vetAvaliacao.length; index++) {    
+  //   if (vetAvaliacao[index] == "1ª Avaliação") {
+  //     aval1 = true;
+  //   }
+  //   if (vetAvaliacao[index] == "2ª Avaliação") {
+  //     aval2 = true;
+  //   }
+  // }
+
+  // if (aval1 == false) {
   // a primeira avaliacao na ta funcionando
   var dia = String(hoje.getDate()).padStart(2, '0');
   var mes = String(hoje.getMonth() + 1).padStart(2, '0'); // mês começa do 0
@@ -294,8 +317,9 @@ function script1(disciplina) {
   document.getElementById("form:dataAV").value = dataFormatada;
   document.getElementById("form:horaAV").value = "18:50";
   document.getElementById('form:adicionarAV').click();
+  // }
 
-
+  // if (aval2 == false) {
   document.getElementById("form:descricaoAV").value = "2ª Avaliação";
   hoje.setDate(hoje.getDate() + 7);
   var dia = String(hoje.getDate()).padStart(2, '0');
@@ -305,63 +329,66 @@ function script1(disciplina) {
   document.getElementById("form:dataAV").value = dataFormatada;
   document.getElementById("form:horaAV").value = "18:50";
   document.getElementById('form:adicionarAV').click();
+  // }
 
-  // const meses = {
-  //   'janeiro': '01',
-  //   'fevereiro': '02',
-  //   'março': '03',
-  //   'abril': '04',
-  //   'maio': '05',
-  //   'junho': '06',
-  //   'julho': '07',
-  //   'agosto': '08',
-  //   'setembro': '09',
-  //   'outubro': '10',
-  //   'novembro': '11',
-  //   'dezembro': '12'
-  // };
-  // Remove o dia da semana e divide a string
-  // const partes = dataTexto.toLowerCase().split(', ')[1].split(' de ');
-  // const dia = partes[0].padStart(2, '0');
-  // const mes = meses[partes[1]];
-  // const ano = partes[2];
-  // return `${dia}/${mes}/${ano}`;
+
+  // aulas
+  const meses = {
+    'janeiro': '01',
+    'fevereiro': '02',
+    'março': '03',
+    'abril': '04',
+    'maio': '05',
+    'junho': '06',
+    'julho': '07',
+    'agosto': '08',
+    'setembro': '09',
+    'outubro': '10',
+    'novembro': '11',
+    'dezembro': '12'
+  };
 
   // aulas
   var tamanho = document.getElementById("form:inicioTA").length;
-  for (let index = 0; index < tamanho; index++) {
-    // todo: verificar se aula já existe
-    // var tabela = document.getElementById("form:listaTopicosAula");
-    // var linhas = tabela.getElementsByTagName("tr");
-    // var valorProcurado = "Maria";
-    // for (let i = 0; i < linhas.length; i++) {
-    //   const celulas = linhas[i].getElementsByTagName("td");
-    //   for (let j = 0; j < celulas.length; j++) {
-    //     if (celulas[j].textContent.trim() === valorProcurado) {
-    //       console.log(`Valor "${valorProcurado}" encontrado na linha ${i}`);
-    //       // Você pode destacar a linha, por exemplo:
-    //       linhas[i].style.backgroundColor = "yellow";
-    //     }
-    //   }
-    // }    
-    document.getElementById("form:inicioTA").selectedIndex = index;
-    document.getElementById("form:fimTA").selectedIndex = index;
-    document.getElementById("form:descricaoTA").value = "Aula";    
-    // Conteudo: não obrigatório
-    // var iframe = document.getElementById('form:conteudoTA_ifr');
-    // var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-    // var elemento = iframeDocument.getElementById('tinymce');
-    // elemento.innerHTML = "Conteúdo Diverso.";
-    document.getElementById("form:adicionarTA").click();
-  }
+  for (let index = 0; index < tamanho; index++) {    
+    
+    // para cada data do select ja existe uma aula cadastrada na tabela?
+    var partes = document.getElementById("form:inicioTA")[index].innerText.split(', ')[1].split(' de ');
+    var dia = partes[0].padStart(2, '0');
+    var mes = meses[partes[1]];
+    var ano = partes[2];
+    var valorProcurado = `${dia}/${mes}/${ano}`;
+    
+    var e = false;
+    var tabela = document.getElementById("form:listaTopicosAula");
+    var linhas = tabela.querySelectorAll("tbody tr");
+    for (let linha of linhas) {
+      var celula = linha.querySelectorAll("td")[0];
+      if (celula && celula.textContent.trim() === valorProcurado.toString()) {
+        e = true;
+      }
+    }
 
+    // se não - cadastra
+    if (e == false) {
+      document.getElementById("form:inicioTA").selectedIndex = index;
+      document.getElementById("form:fimTA").selectedIndex = index;
+      document.getElementById("form:descricaoTA").value = "Aula";
+      // Conteudo: não obrigatório
+      // var iframe = document.getElementById('form:conteudoTA_ifr');
+      // var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+      // var elemento = iframeDocument.getElementById('tinymce');
+      // elemento.innerHTML = "Conteúdo Diverso.";
+      document.getElementById("form:adicionarTA").click();
+    }
+  }
   // document.getElementById("form:tipo:3").checked = true;
   document.getElementById("form:tipo:3").click();
   document.getElementById("form:descricao").value = "PPC - TADS";
   document.getElementById("form:url").value = "https://tads.riogrande.ifrs.edu.br/ppc";
   document.getElementById("form:tipoIR:0").checked = true;
   document.getElementById("form:adicionarIR").click();
-  
+
   // document.getElementById("form:tipoIR").value = 1;
 }
 
