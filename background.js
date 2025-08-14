@@ -351,6 +351,8 @@ function script1(disciplina) {
   // aulas
   var tamanho = document.getElementById("form:inicioTA").length;
   for (let index = 0; index < tamanho; index++) {
+    
+    /*
     // para cada data do select ja existe uma aula cadastrada na tabela?
     var partes = document.getElementById("form:inicioTA")[index].innerText.split(', ')[1].split(' de ');
     var dia = partes[0].padStart(2, '0');
@@ -371,6 +373,7 @@ function script1(disciplina) {
 
     // se não - cadastra
     if (e == false) {
+    */
       document.getElementById("form:inicioTA").selectedIndex = index;
       document.getElementById("form:fimTA").selectedIndex = index;
       document.getElementById("form:descricaoTA").value = "Aula";
@@ -380,7 +383,7 @@ function script1(disciplina) {
       // var elemento = iframeDocument.getElementById('tinymce');
       // elemento.innerHTML = "Conteúdo Diverso.";
       document.getElementById("form:adicionarTA").click();
-    }
+    // }
   }
   // document.getElementById("form:tipo:3").checked = true;
   document.getElementById("form:tipo:3").click();
