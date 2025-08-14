@@ -7,11 +7,12 @@ Você é professor e precisa preencher intermináveis planos de ensino todo o se
 
 1) Baixar a extensão em formato .zip (https://github.com/IgorAvilaPereira/SIGAA_PlanoDeEnsino/archive/refs/heads/main.zip)
 2) Descompactar o .zip em algum diretório de sua escolha
-3) No Google Chrome entrar em "More Tools >> Extensions"
-4) Habilitar a opção "Developer mode"
-5) Clicar no botão "Load unpacked"
+3) No Google Chrome entrar em "More Tools >> Extensions" ou "Mais Ferramentas >> Extensões"
+4) Habilitar a opção "Developer mode" ou "Modo Desenvolvedor"
+5) Clicar no botão "Load unpacked" ou "Carregamento Descompactado"
 6) Buscar a pasta descompactada
 7) E a instalação está completa!!
+8) A extensão ficará disponível junto das demais
 
 ## Uso
 
