@@ -340,8 +340,6 @@ function script1(disciplina) {
   // document.getElementById("form:tipoIR:0").checked = true;
   // document.getElementById("form:tipoIR").value = 1;
   
-
-
   // aulas
   // const meses = {
   //   'janeiro': '01',
@@ -361,7 +359,6 @@ function script1(disciplina) {
   // aulas
   var tamanho = document.getElementById("form:inicioTA").length;
   for (let index = 0; index < tamanho; index++) {
-
     /*
     // para cada data do select ja existe uma aula cadastrada na tabela?
     var partes = document.getElementById("form:inicioTA")[index].innerText.split(', ')[1].split(' de ');
@@ -395,7 +392,7 @@ function script1(disciplina) {
     document.getElementById("form:adicionarTA").click();
     // }
   }
-
+  // location.reload();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
