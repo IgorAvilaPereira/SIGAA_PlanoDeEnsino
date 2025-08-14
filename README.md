@@ -17,9 +17,13 @@ Você é professore precisa preencher intermináveis planos de ensino todo o sem
 
 1. Primeiramente é preciso instalar a extensão em seu navegador baseado no chromium.
 
-2. Depois da instalação, é preciso entrar no SIGAA com seu login e senha e acessar a página de preenchimento do plano de ensino de cada componente curricular (disciplina):
+2. Depois da instalação, é preciso entrar no SIGAA com seu login e senha e acessar a página de preenchimento do plano de ensino de cada componente curricular (disciplina): Portal do Docente > Ensino > Turmas > Gerenciar Plano de Curso > E selecione o componente desejado
 
-3. Na página, selecione a disciplina e clique no botão "Preencher" .
+3. Acesse a extensão, selecione a disciplina e clique no botão "Preencher".
+
+4. A extensão preeencherá os campos de objetivos, metodologia, atendimento, ementas, bibliografia, avaliações e etc. automaticamente.
+
+5. Confira o que foi preenchido e clique no botão "Salvar e Enviar" no final da página (SIGAA)
 
 * obs: repita isso para as demais disciplinas
 
