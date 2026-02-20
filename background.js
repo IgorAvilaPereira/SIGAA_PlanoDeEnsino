@@ -379,10 +379,6 @@ function script1(disciplina) {
     if (e == false) {
     */
     document.getElementById("form:inicioTA").selectedIndex = index;
-    setTimeout(() => {
-      console.log("This runs after 2 seconds");
-    }, 2000);
-
     document.getElementById("form:fimTA").selectedIndex = index;
     document.getElementById("form:descricaoTA").value = "Aula";
     // Conteudo: não obrigatório
@@ -391,13 +387,20 @@ function script1(disciplina) {
     // var elemento = iframeDocument.getElementById('tinymce');
     // elemento.innerHTML = "Conteúdo Diverso.";
     document.getElementById("form:adicionarTA").click();
-    
+    setTimeout(() => {
+      console.log("This runs after 2 seconds");
+    }, 1000);    
   }
 
   // document.getElementById("form:tipo:3").checked = true;
   document.getElementById("form:tipo:3").click();
   // document.getElementById("form:tipoIR:0").checked = true;
   document.getElementById("form:tipoIR:0").click();
+
+      setTimeout(() => {
+      console.log("This runs after 2 seconds");
+    }, 2000);
+
   document.getElementById("form:descricao").value = "PPC - TADS";
   document.getElementById("form:url").value = "https://tads.riogrande.ifrs.edu.br/ppc";  
   document.getElementById("form:adicionarIR").click();  
